@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryptor and Decryptor</title>
+    <link rel="stylesheet" href="static/styles.css">
+    
+        
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Text Encryptor and Decryptor</h1>
+        <form method="POST">
+            <textarea name="text" placeholder="Enter text here...">{{ request.form.get('text') }}</textarea>
+            <button type="submit" name="action" value="Encrypt">Encrypt</button>
+            <button type="submit" name="action" value="Decrypt">Decrypt</button>
+        </form>
+        <div class="result">
+            <h2>Encrypted Text:</h2>
+            <textarea readonly>{{ encrypted_text }}</textarea>
+            <h2>Decrypted Text:</h2>
+            <textarea readonly>{{ decrypted_text }}</textarea>
+        </div>
+    </div>
+</body>
+</html>
